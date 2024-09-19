@@ -6,6 +6,7 @@ export class CreatePhoneTable1726671743911 implements MigrationInterface {
       CREATE TABLE "phone" (
         "id" SERIAL PRIMARY KEY,
         "name" VARCHAR(255),
+        "brand" VARCHAR(255),
         "price" INTEGER,
         "screenDiagonal" VARCHAR(255),
         "screenResolution" VARCHAR(255),

@@ -1,4 +1,22 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  AdditionallyType,
+  BrandType,
+  CapacityType,
+  ColorsType,
+  CoreType,
+  CPUType,
+  FrontCameraType,
+  MainCameraType,
+  MemoryType,
+  NameType,
+  PixelDensityType,
+  PriceType,
+  ScreenDiagonalType,
+  ScreenRefreshType,
+  ScreenResolutionType,
+  ScreenType,
+} from './phones.types';
 
 @Entity()
 export class Phone {
@@ -6,53 +24,56 @@ export class Phone {
   id: number;
 
   @Column()
-  name: string;
+  name: NameType;
 
   @Column()
-  price: number;
+  brand: BrandType;
 
   @Column()
-  screenDiagonal: string;
+  price: PriceType;
 
   @Column()
-  screenResolution: string;
+  screenDiagonal: ScreenDiagonalType;
 
   @Column()
-  screenRefreshRate: string;
+  screenResolution: ScreenResolutionType;
 
   @Column()
-  screenType: string;
+  screenRefreshRate: ScreenRefreshType;
 
   @Column()
-  cpu: string;
+  screenType: ScreenType;
 
   @Column()
-  cores: number;
+  cpu: CPUType;
+
+  @Column()
+  cores: CoreType;
 
   @Column('simple-array')
   imgPath: string[];
 
   @Column('simple-array')
-  colors: string[];
+  colors: ColorsType;
 
   @Column('simple-array')
-  memory: string[];
+  memory: MemoryType;
 
   @Column()
-  mainCamera: string;
+  mainCamera: MainCameraType;
 
   @Column()
-  frontCamera: string;
+  frontCamera: FrontCameraType;
 
   @Column()
   details: string;
 
   @Column()
-  capacity: string;
+  capacity: CapacityType;
 
   @Column('simple-array')
-  additionally: string[];
+  additionally: AdditionallyType;
 
   @Column()
-  pixelDensity: string;
+  pixelDensity: PixelDensityType;
 }
