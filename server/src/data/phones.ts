@@ -731,3 +731,15 @@ export const phonesData: Omit<Phone, 'id'>[] = [
     pixelDensity: '326ppi',
   },
 ];
+
+function arrayToString(array: string[]): string {
+  return `{${array.map((item) => `'${item}'`).join(',')}}`;
+}
+
+export const parsedPhoneData = phonesData.map((phone) => ({
+  ...phone,
+  imgPath: arrayToString(phone.imgPath),
+  colors: arrayToString(phone.colors),
+  memory: arrayToString(phone.memory),
+  additionally: arrayToString(phone.additionally),
+}));

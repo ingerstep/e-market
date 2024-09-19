@@ -20,6 +20,10 @@ export class PhonesService {
     return this.phonesRepository.findOneBy({ id });
   }
 
+  async clearPhones(): Promise<void> {
+    await this.phonesRepository.clear();
+  }
+
   createPhone(phone: Phone): Promise<Phone> {
     return this.phonesRepository.save(phone);
   }
