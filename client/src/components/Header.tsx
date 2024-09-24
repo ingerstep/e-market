@@ -11,7 +11,9 @@ export const Header = () => {
     <header className="w-full font-roboto-medium">
       <div className="w-full bg-primary text-tertiary py-4">
         <div className="mx-auto container flex items-center justify-between">
-          <button><LogoSvg /></button>
+          <button>
+            <LogoSvg />
+          </button>
           <input
             type="text"
             className="p-4 pl-[38px] rounded-lg shadow-lg w-full bg-search-pattern bg-[14px_16px] bg-no-repeat max-w-[480px]"
@@ -27,9 +29,15 @@ export const Header = () => {
             </ul>
           </nav>
           <div className="flex gap-6">
-            <button><LikeSvg /></button>
-            <button><CartSvg /></button>
-            <button><UserSvg /></button>
+            <button>
+              <LikeSvg />
+            </button>
+            <button>
+              <CartSvg />
+            </button>
+            <button>
+              <UserSvg />
+            </button>
           </div>
         </div>
       </div>

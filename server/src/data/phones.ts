@@ -1,6 +1,7 @@
 import { Phone } from 'src/phones/phone.entity';
+import { arrayToString } from 'src/utils';
 
-export const phonesData: Omit<Phone, 'id'>[] = [
+const phonesData: Omit<Phone, 'id'>[] = [
   {
     name: 'iPhone 14 Pro',
     brand: 'Apple',
@@ -731,10 +732,6 @@ export const phonesData: Omit<Phone, 'id'>[] = [
     pixelDensity: '326ppi',
   },
 ];
-
-function arrayToString(array: string[]): string {
-  return `{${array.map((item) => `'${item}'`).join(',')}}`;
-}
 
 export const parsedPhoneData = phonesData.map((phone) => ({
   ...phone,

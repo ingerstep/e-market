@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './app.module';
-import { PhonesSeedService } from './phones-seed/phones-seed.service';
+import { PhonesService } from './phones/phones.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const phonesSeedService = app.get(PhonesSeedService);
+  const phonesSeedService = app.get(PhonesService);
   await phonesSeedService.seedPhones();
   await app.listen(3000);
 }

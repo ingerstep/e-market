@@ -6,7 +6,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 
 import { PhonesModule } from './phones/phones.module';
-import { PhonesSeedService } from './phones-seed/phones-seed.service';
 import typeorm from './config/typeorm';
 
 @Module({
@@ -27,6 +26,6 @@ import typeorm from './config/typeorm';
     }),
     PhonesModule,
   ],
-  providers: [PhonesSeedService],
+  providers: [],
 })
 export class AppModule {}
