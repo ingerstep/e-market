@@ -6,6 +6,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 
 import { PhonesModule } from './phones/phones.module';
+import { UserModule } from './user/user.module';
 import typeorm from './config/typeorm';
 
 @Module({
@@ -25,6 +26,7 @@ import typeorm from './config/typeorm';
       serveRoot: '/static',
     }),
     PhonesModule,
+    UserModule,
   ],
   providers: [],
 })
