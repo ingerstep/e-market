@@ -18,6 +18,8 @@ E-market — это онлайн-платформа для продажи быт
 
 - **-**: .
   - **-**: .
+  
+### Макет - [Figma](https://www.figma.com/design/aEL4s7qHVNbuQxZmHkvWni/E-Commerce-UI-Kit-(Community)?node-id=113-159&node-type=canvas&t=9S3m8orkpzwUUHEb-0)
 
 ## Установить репозиторий
 
