@@ -1,12 +1,14 @@
 import { join } from 'path';
 
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 
 import { PhonesModule } from './phones/phones.module';
+import { UserModule } from './user/user.module';
 import typeorm from './config/typeorm';
+import { AuthMiddleware } from './user/middleware/auth.middleware';
 
 @Module({
   imports: [
@@ -25,7 +27,14 @@ import typeorm from './config/typeorm';
       serveRoot: '/static',
     }),
     PhonesModule,
+    UserModule,
   ],
   providers: [],
 })
-export class AppModule {}
+export class AppModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(AuthMiddleware)
+      .forRoutes({ path: '*', method: RequestMethod.ALL });
+  }
+}
