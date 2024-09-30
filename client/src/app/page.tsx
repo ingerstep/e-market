@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main className="w-full bg-alternate">asfasf</main>;
+  return <main className="w-full bg-alternate">ыфаыфа</main>;
 }
