@@ -1,57 +1,109 @@
-# E-market (в разработке)
+# E-market (in development)
 
-E-market — это онлайн-платформа для продажи бытовой техники, дизайн которой вдохновлён эстетикой Apple.
+E-market is an online platform for selling household appliances, designed with inspiration from Apple’s aesthetics.
 
-## Описание
+## Descriptiom
 
-Приложение состоит из нескольких экранов:
+The application consists of several screens:
 
-- **Авторизация**: .
-- **Основная страница**: .
-- **Страница продуктов категории**: .
-- **Страница продукта**: .
-- **Корзина**: .
-- **Избранное**: .
-- **Аккаунт**: .
+- **Authorization**: .
+- **Main Page**: .
+- **Category Product Page**: .
+- **Product page**: .
+- **Cart**: .
+- **Favorites**: .
+- **Account**: .
 
-### Общие элементы приложения
+### General Elements of the Application
 
 - **-**: .
   - **-**: .
   
-### Макет - [Figma](https://www.figma.com/design/aEL4s7qHVNbuQxZmHkvWni/E-Commerce-UI-Kit-(Community)?node-id=113-159&node-type=canvas&t=9S3m8orkpzwUUHEb-0)
+### Layout - [Figma](https://www.figma.com/design/aEL4s7qHVNbuQxZmHkvWni/E-Commerce-UI-Kit-(Community)?node-id=113-159&node-type=canvas&t=9S3m8orkpzwUUHEb-0)
 
-## Установить репозиторий
-
-После установки репозитория, нужно инициализировать backend часть приложения, далее frontend.
+## Set Up the Repository
 
 ```bash
 $ git clone https://github.com/ingerstep/e-market
 $ cd e-market
 ```
 
+# Running with Docker
+
+## Description
+
+To simplify the deployment of the application, you can use Docker.
+
+## Installation
+
+Make sure you have Docker and Docker Compose installed.
+
+```bash
+$ docker --version
+$ docker compose version | docker-compose --version
+```
+## Environment
+
+```bash
+#create .env in root of the project
+POSTGRES_HOST=db
+POSTGRES_PORT=5432
+POSTGRES_LOCAL_PORT=your_local_port | 5432
+POSTGRES_USER=user
+POSTGRES_PASSWORD=your_password
+POSTGRES_DB=your_db_name
+SERVER_PORT=your_server_port | 3000
+JWT_SECRET=your_secret
+```
+## Running the Application
+
+### Navigate to the root directory of the project.
+
+Start Docker Compose:
+
+```bash
+$ docker-compose up --build
+```
+
+### Stopping the Application
+
+To stop the application, use:
+
+```bash
+$ docker-compose down
+```
+
+- **The frontend will be accessible at http://localhost:3000.**
+- **The backend will be accessible at http://localhost:3000 or your specified SERVER_PORT.**
+- **After each docker compose up --build, Postgres restarts the migrations and refills the tables with mock data.**
+- **An isolated bridge network named emarket is created in the Docker settings.**
+
+# Default start
+
+After cloning the repository, you need to initialize the backend part of the application, followed by the frontend.
+
 # Backend
 
 ## Description
 
-Репозиторий содержит серверную часть приложения c использованием NestJS и PostgreSQL.
+The repository contains the server side of the application using NestJS and PostgreSQL.
 
-Директория - /server.
+Directory - /server.
 
-## Установка зависимостей и инициализация БД
+## Install Dependencies and Initialize the Database
 
 ```bash
 $ npm install
 $ npm run migration:run
 ```
 
-## Запуск приложения
+## Run the Application
 
 ```bash
 # development
 $ npm run start
 ```
-## Cборка
+## Build
 
 ```bash
 $ npm run build
@@ -61,24 +113,24 @@ $ npm run build
 
 ## Description
 
-Этот репозиторий содержит фронтенд часть приложения, использующего Next JS, Redux и TypeScript.
+This repository contains the frontend part of the application, utilizing Next JS, Redux, and TypeScript.
 
-Директория - /client.
+Directory - /client.
 
-## Установка зависимостей
+## Install Dependencies
 
 ```bash
 $ npm install
 ```
 
-## Запуск приложения
+## Run the Application
 
 ```bash
 # development
 $ npm run dev
 ```
 
-## Cборка
+## Build
 
 ```bash
 $ npm run build
