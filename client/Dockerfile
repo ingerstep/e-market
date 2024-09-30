@@ -1,4 +1,4 @@
-FROM node:current
+FROM node:current-alpine3.20
 
 LABEL clientport=3000
 

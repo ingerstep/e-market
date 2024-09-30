@@ -1,4 +1,4 @@
-FROM node:current
+FROM node:current-alpine3.20
 
 LABEL dbport=5434 serverport=3001
 
@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 3000
 
-ENTRYPOINT ["npm", "run"]
+CMD ["sh", "-c", "npm run migration:run && npm run start:dev"]
