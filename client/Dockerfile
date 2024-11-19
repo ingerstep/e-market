@@ -1,8 +1,6 @@
 FROM node:current-alpine3.20
 
-LABEL clientport=3000
-
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/client
 
 COPY package*.json ./
 

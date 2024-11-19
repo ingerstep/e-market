@@ -1,8 +1,6 @@
 FROM node:current-alpine3.20
 
-LABEL dbport=5434 serverport=3001
-
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/server
 
 COPY package*.json ./
 
