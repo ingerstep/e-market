@@ -1,5 +1,6 @@
 import { ShowCase } from '@/components/ShowCase';
 import { Button } from '@/components/ui/Button';
+import { browseByCategory } from '@/data/BrowseByCategory';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -29,6 +30,7 @@ export default function Home() {
           />
         </div>
       </section>
+
       <section className="flex bg-white">
         <div className="flex w-1/2 flex-col">
           <ShowCase
@@ -63,6 +65,24 @@ export default function Home() {
             src="/img/macbook.png"
             linkSrc="/catalog/computers"
           />
+        </div>
+      </section>
+
+      <section className="bg-white flex justify-center">
+        <div className="container flex flex-col py-20">
+          <h3 className="mb-5 text-3xl">Browse By Category</h3>
+          <nav className="flex justify-between">
+            {browseByCategory.map(({ href, text, svg }) => (
+              <Link
+                key={href}
+                href={href}
+                className="bg-secondary rounded-lg w-[160px] h-[128px] flex flex-col items-center justify-center gap-y-1"
+              >
+                {svg}
+                {text}
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
     </main>
