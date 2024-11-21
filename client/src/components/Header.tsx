@@ -11,9 +11,9 @@ export const Header = () => {
     <header className="w-full font-roboto-medium">
       <div className="w-full bg-primary text-tertiary py-4">
         <div className="mx-auto container flex items-center justify-between">
-          <button>
+          <Link href="/">
             <LogoSvg />
-          </button>
+          </Link>
           <input
             type="text"
             className="p-4 pl-[38px] rounded-lg shadow-lg w-full bg-search-pattern bg-[14px_16px] bg-no-repeat max-w-[480px]"

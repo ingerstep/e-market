@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       close: '',
       submit: '',
       menu: '',
-      primary: '',
+      primary: 'text-base rounded-lg px-14 py-4 border',
       secondary: '',
     };
 
