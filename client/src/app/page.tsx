@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex bg-white">
-        <div className="flex flex-col">
+        <div className="flex w-1/2 flex-col">
           <ShowCase
             imgHeight={343}
             imgWidth={513}
@@ -39,28 +39,30 @@ export default function Home() {
           />
           <div className="flex">
             <ShowCase
-              imgHeight={272}
-              imgWidth={245}
+              imgHeight={132}
+              imgWidth={145}
+              divStyle="bg-secondary"
               type="airpods"
               src="/img/airpods.png"
             />
-            <div className="flex flex-col">
-              <h2>Apple Vision Pro</h2>
-              <span>An immersive way to experience entertaiment.</span>
-            </div>
+            <ShowCase
+              imgHeight={132}
+              imgWidth={145}
+              divStyle="bg-alternate text-white"
+              type="visionPro"
+              src="/img/visionpro.png"
+            />
           </div>
         </div>
-        <div>
-          <h2>Macbook Air</h2>
-          <span>
-            The new 15-inch MacBook Air makes room for more of what you love
-            with a spacious Liquid Retina display.
-          </span>
-          <Link href="/catalog/computers">
-            <Button variant="primary" className="text-black border-black">
-              Shop Now
-            </Button>
-          </Link>
+        <div className="w-1/2">
+          <ShowCase
+            imgHeight={332}
+            imgWidth={345}
+            divStyle="flex-row-reverse bg-secondary h-full pl-14"
+            type="mackbookAir"
+            src="/img/macbook.png"
+            linkSrc="/catalog/computers"
+          />
         </div>
       </section>
     </main>

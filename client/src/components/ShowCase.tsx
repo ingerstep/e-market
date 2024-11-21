@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { Button } from './ui/Button';
 import { showCaseText } from './data/ShowCaseText';
+import clsx from 'clsx';
 
 interface ShowCaseProps {
-  type: string;
+  type: 'airpods' | 'ipad' | 'mackbookAir' | 'visionPro' | 'playstation';
   src: string;
   linkSrc?: string;
+  divStyle?: string;
   imgHeight: number;
   imgWidth: number;
 }
@@ -18,6 +20,7 @@ export const ShowCase: FC<ShowCaseProps> = ({
   linkSrc,
   imgHeight,
   imgWidth,
+  divStyle,
 }) => {
   const content = showCaseText[type];
 
@@ -26,19 +29,19 @@ export const ShowCase: FC<ShowCaseProps> = ({
   }
 
   return (
-    <div className="flex">
+    <div className={clsx('flex items-center text-black', `${divStyle}`)}>
       <Image
         width={imgWidth}
         height={imgHeight}
         src={src}
         alt={content.header}
       />
-      <div className="flex flex-col">
-        <h2>{content.header}</h2>
-        <span>{content.descr}</span>
+      <div className="flex flex-col ml-2">
+        <h2 className="text-5xl mb-1">{content.header}</h2>
+        <span className="opacity-40">{content.descr}</span>
         {linkSrc && (
           <Link href={linkSrc}>
-            <Button variant="primary" className="text-black border-black">
+            <Button variant="primary" className="text-black border-black mt-2">
               Shop Now
             </Button>
           </Link>
