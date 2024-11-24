@@ -11,17 +11,17 @@ interface ShowCaseProps {
   src: string;
   linkSrc?: string;
   divStyle?: string;
-  imgHeight: number;
-  imgWidth: number;
+  imgStyle?: string;
+  btnStyle?: string;
 }
 
 export const ShowCase: FC<ShowCaseProps> = ({
   type,
   src,
   linkSrc,
-  imgHeight,
-  imgWidth,
+  btnStyle,
   divStyle,
+  imgStyle,
 }) => {
   const content = showCaseText[type];
 
@@ -30,10 +30,11 @@ export const ShowCase: FC<ShowCaseProps> = ({
   }
 
   return (
-    <div className={clsx('flex items-center text-black', `${divStyle}`)}>
+    <div className={clsx('flex items-center text-black', divStyle)}>
       <Image
-        width={imgWidth}
-        height={imgHeight}
+        width={234}
+        height={245}
+        className={imgStyle}
         src={src}
         alt={content.header}
       />
@@ -42,7 +43,10 @@ export const ShowCase: FC<ShowCaseProps> = ({
         <span className="opacity-40">{content.descr}</span>
         {linkSrc && (
           <Link href={linkSrc}>
-            <Button variant="primary" className="text-black border-black mt-2">
+            <Button
+              variant="primary"
+              className={clsx('text-black border-black mt-2', btnStyle)}
+            >
               Shop Now
             </Button>
           </Link>

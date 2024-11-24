@@ -35,22 +35,17 @@ export default function Home() {
       <section className="flex bg-white">
         <div className="flex w-1/2 flex-col">
           <ShowCase
-            imgHeight={343}
-            imgWidth={513}
+            imgStyle="w-[513px] h-[343px]"
             type="playstation"
             src="/img/playstation.png"
           />
           <div className="flex">
             <ShowCase
-              imgHeight={132}
-              imgWidth={145}
               divStyle="bg-secondary"
               type="airpods"
               src="/img/airpods.png"
             />
             <ShowCase
-              imgHeight={132}
-              imgWidth={145}
               divStyle="bg-alternate text-white"
               type="visionPro"
               src="/img/visionpro.png"
@@ -59,8 +54,7 @@ export default function Home() {
         </div>
         <div className="w-1/2">
           <ShowCase
-            imgHeight={332}
-            imgWidth={345}
+            imgStyle="w-[829px] h-[502px]"
             divStyle="flex-row-reverse bg-secondary h-full pl-14"
             type="mackbookAir"
             src="/img/macbook.png"
@@ -85,6 +79,38 @@ export default function Home() {
             ))}
           </nav>
         </div>
+      </section>
+
+      <section className="bg-white flex justify-center">
+        <ShowCase
+          imgStyle="w-[371px] h-[390px]"
+          divStyle="flex-col w-full gap-12 bg-white pb-12 text-center"
+          type="popular"
+          src="/img/popular.png"
+          linkSrc="/catalog/smart-watches"
+        />
+        <ShowCase
+          imgStyle="w-[371px] h-[390px]"
+          divStyle="flex-col w-full gap-12 bg-primary pb-12 text-center"
+          type="ipadPro"
+          src="/img/ipadpro.png"
+          linkSrc="/catalog/computers"
+        />
+        <ShowCase
+          imgStyle="w-[371px] h-[390px]"
+          divStyle="flex-col w-full gap-12 bg-secondary pb-12 text-center"
+          type="samsung"
+          src="/img/samsung.png"
+          linkSrc="/catalog/phones"
+        />
+        <ShowCase
+          imgStyle="w-[371px] h-[390px]"
+          btnStyle="text-white border-white"
+          divStyle="flex-col w-full gap-12 bg-alternate text-white pb-12 text-center"
+          type="mackbookAir"
+          src="/img/macbook.png"
+          linkSrc="/catalog/computers"
+        />
       </section>
 
       <section className="bg-gradient-to-r from-alternate via-tertiary to-alternate flex justify-center text-white py-48 relative">
