@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { footerServices } from './data/FooterServices';
 import { LogoSvg } from './icons/Logo';
 import { footerAssistance } from './data/FooterAssistance';

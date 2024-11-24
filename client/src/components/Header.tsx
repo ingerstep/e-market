@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { CartSvg } from '@/components/icons/Cart';
 import { LikeSvg } from '@/components/icons/Like';
 import { LogoSvg } from '@/components/icons/Logo';

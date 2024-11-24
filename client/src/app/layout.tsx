@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+
 import '../../public/globals.css';
+
 import { boldRoboto, lightRoboto, regularRoboto, mediumRoboto } from '@/fonts';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';

@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import { Button } from './ui/Button';
-import { showCaseText } from './data/ShowCaseText';
 import clsx from 'clsx';
 
+import { Button } from './ui/Button';
+import { showCaseText } from './data/ShowCaseText';
+
 interface ShowCaseProps {
-  type: 'airpods' | 'ipad' | 'mackbookAir' | 'visionPro' | 'playstation';
+  type: keyof typeof showCaseText;
   src: string;
   linkSrc?: string;
   divStyle?: string;

@@ -1,8 +1,9 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { ShowCase } from '@/components/ShowCase';
 import { Button } from '@/components/ui/Button';
 import { browseByCategory } from '@/data/BrowseByCategory';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -83,6 +84,55 @@ export default function Home() {
               </Link>
             ))}
           </nav>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-alternate via-tertiary to-alternate flex justify-center text-white py-48 relative">
+        <Image
+          width={310}
+          height={200}
+          className="absolute top-0 left-[19%]"
+          alt="summer sale"
+          src="/img/summer/macbook.png"
+        />
+        <Image
+          width={350}
+          height={200}
+          className="absolute top-[48%] left-0"
+          alt="summer sale"
+          src="/img/summer/ipadpro.png"
+        />
+        <Image
+          width={300}
+          height={200}
+          className="absolute top-[13%] left-[4%]"
+          alt="summer sale"
+          src="/img/summer/ipad.png"
+        />
+        <Image
+          width={230}
+          height={200}
+          className="absolute top-[2%] right-0"
+          alt="summer sale"
+          src="/img/summer/iphone.png"
+        />
+        <Image
+          width={400}
+          height={200}
+          className="absolute bottom-0 right-0"
+          alt="summer sale"
+          src="/img/summer/watch.png"
+        />
+        <div className="flex flex-col items-center">
+          <h2 className="text-7xl mb-4">
+            Big Summer <span className="font-bold">Sale</span>
+          </h2>
+          <p className="opacity-50 mb-10">
+            Commodo fames vitae vitae leo mauris in. Eu consequat.
+          </p>
+          <Link href="/catalog/phones">
+            <Button variant="primary">Shop Now</Button>
+          </Link>
         </div>
       </section>
     </main>

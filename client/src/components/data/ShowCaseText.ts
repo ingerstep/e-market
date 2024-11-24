@@ -1,4 +1,4 @@
-export const showCaseText: Record<string, { header: string; descr: string }> = {
+export const showCaseText = {
   airpods: {
     header: 'Apple AirPods Max',
     descr: 'Computational audio. Listen, it`s powerful',
@@ -21,4 +21,4 @@ export const showCaseText: Record<string, { header: string; descr: string }> = {
     descr:
       'Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your Playstation experience.',
   },
-};
+} satisfies Record<string, { header: string; descr: string }>;
