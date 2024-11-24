@@ -93,7 +93,7 @@ export default function Home() {
             <Card
               imgSrc={'/#'}
               price={'$329'}
-              link={'/'}
+              link={'/catalog/phones/61'}
               isLiked={true}
               name={'asffas'}
             />
