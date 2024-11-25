@@ -1,25 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 
 import { Card } from './Card';
+import { useGetPhonesByCategoryQuery } from '@/store/newArrivalSlice';
 
 export const PhoneCatalog = () => {
   const [category, setCategory] = useState('isNewArrival');
-  const [phones, setPhones] = useState([]);
-
-  useEffect(() => {
-    if (category) {
-      axios
-        .get(`http://localhost:3000/catalog/phones/category/${category}`)
-        .then((response) => {
-          setPhones(response.data);
-          console.log(response.data);
-        })
-        .catch((error) => console.error('Error fetching phones:', error));
-    }
-  }, [category]);
+  const {
+    data: phones = [],
+    isLoading,
+    isError,
+  } = useGetPhonesByCategoryQuery(category);
 
   return (
     <section className="bg-white flex justify-center">
@@ -36,14 +28,14 @@ export const PhoneCatalog = () => {
           </button>
         </nav>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {phones.map((phone: any) => (
+          {phones.map(({ id, imgPath, isLiked, name, price }) => (
             <Card
-              key={phone.id}
-              imgSrc={phone.imgPath[0].replace(/'/g, '')}
-              price={`$${phone.price}`}
-              link={`/catalog/phones/${phone.id}`}
-              isLiked={phone.isLiked}
-              name={phone.name}
+              key={id}
+              imgSrc={imgPath[0].replace(/'/g, '')}
+              price={`$${price}`}
+              link={`/catalog/phones/${id}`}
+              isLiked={isLiked}
+              name={name}
             />
           ))}
         </div>

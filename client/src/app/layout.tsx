@@ -5,6 +5,7 @@ import '../../public/globals.css';
 import { boldRoboto, lightRoboto, regularRoboto, mediumRoboto } from '@/fonts';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import StoreProvider from './StoreProvider';
 
 export const metadata: Metadata = {
   title: 'E-Market',
@@ -22,7 +23,7 @@ export default function RootLayout({
         className={`${boldRoboto.variable} ${lightRoboto.variable} ${regularRoboto.variable} ${mediumRoboto.variable} antialiased`}
       >
         <Header />
-        {children}
+        <StoreProvider>{children}</StoreProvider>
         <Footer />
       </body>
     </html>

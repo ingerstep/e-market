@@ -720,9 +720,9 @@ const phonesData: Omit<Phone, 'id'>[] = [
     cpu: 'Snapdragon 865',
     cores: 8,
     imgPath: [
-      'http://localhost:3000/static/phones/xiaomimi11ultra1.webp',
-      'http://localhost:3000/static/phones/xiaomimi11ultra2.webp',
-      'http://localhost:3000/static/phones/xiaomimi11ultra3.webp',
+      'http://localhost:3000/static/phones/xiaomi/xiaomimi11ultra1.webp',
+      'http://localhost:3000/static/phones/xiaomi/xiaomimi11ultra2.webp',
+      'http://localhost:3000/static/phones/xiaomi/xiaomimi11ultra3.webp',
     ],
     colors: ['Cosmic Black', 'Lunar Silver', 'Aurora Blue'],
     memory: ['128GB', '256GB'],

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { ShowCase } from '@/components/ShowCase';
 import { Button } from '@/components/ui/Button';
 import { browseByCategory } from '@/data/BrowseByCategory';
-import { Card } from '@/components/Card';
 import { PhoneCatalog } from '@/components/NewArrival';
 
 export default function Home() {
@@ -83,11 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white flex justify-center">
-        <div className="container py-12 flex flex-col gap-8">
-          <PhoneCatalog />
-        </div>
-      </section>
+      <PhoneCatalog />
 
       <section className="bg-white flex justify-center">
         <ShowCase

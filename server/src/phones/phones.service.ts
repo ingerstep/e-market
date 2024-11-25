@@ -12,7 +12,7 @@ export class PhonesService {
     @InjectRepository(Phone)
     private phonesRepository: Repository<Phone>,
     private entityManager: EntityManager,
-  ) { }
+  ) {}
 
   getAllPhones(): Promise<Phone[]> {
     return this.phonesRepository.find();
