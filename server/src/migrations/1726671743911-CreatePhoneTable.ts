@@ -22,12 +22,16 @@ export class CreatePhoneTable1726671743911 implements MigrationInterface {
         "details" TEXT,
         "capacity" VARCHAR(255),
         "additionally" TEXT[],
-        "pixelDensity" VARCHAR(255)
+        "pixelDensity" VARCHAR(255),
+        "isBestseller" BOOLEAN DEFAULT FALSE,  
+        "isNewArrival" BOOLEAN DEFAULT FALSE,  
+        "isFeatured" BOOLEAN DEFAULT FALSE,    
+        "isDiscounted" BOOLEAN DEFAULT FALSE  
       );
     `);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`DROP TABLE "phone";`);
+    await queryRunner.query(`DROP TABLE IF EXISTS "phone" CASCADE;`);
   }
 }

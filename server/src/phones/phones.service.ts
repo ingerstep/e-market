@@ -12,7 +12,7 @@ export class PhonesService {
     @InjectRepository(Phone)
     private phonesRepository: Repository<Phone>,
     private entityManager: EntityManager,
-  ) { }
+  ) {}
 
   getAllPhones(): Promise<Phone[]> {
     return this.phonesRepository.find();
@@ -24,6 +24,14 @@ export class PhonesService {
 
   createPhone(phone: Phone): Promise<Phone> {
     return this.phonesRepository.save(phone);
+  }
+
+  async getPhonesByCategory(category: string): Promise<Phone[]> {
+    return this.phonesRepository.find({
+      where: {
+        [category]: true,
+      },
+    });
   }
 
   async clearPhones(): Promise<void> {

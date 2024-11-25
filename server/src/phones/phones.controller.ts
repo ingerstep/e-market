@@ -20,4 +20,24 @@ export class PhonesController {
   createPhone(@Body() phone: Phone): Promise<Phone> {
     return this.phonesService.createPhone(phone);
   }
+
+  @Get('newarrival')
+  getNewArrivalPhones(): Promise<Phone[]> {
+    return this.phonesService.getPhonesByCategory('isNewArrival');
+  }
+
+  @Get('bestsellers')
+  getBestsellerPhones(): Promise<Phone[]> {
+    return this.phonesService.getPhonesByCategory('isBestseller');
+  }
+
+  @Get('featured')
+  getFeaturedPhones(): Promise<Phone[]> {
+    return this.phonesService.getPhonesByCategory('isFeatured');
+  }
+
+  @Get('discounted')
+  getDiscountedPhones(): Promise<Phone[]> {
+    return this.phonesService.getPhonesByCategory('isDiscounted');
+  }
 }

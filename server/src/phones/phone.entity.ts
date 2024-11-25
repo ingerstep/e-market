@@ -76,4 +76,16 @@ export class Phone {
 
   @Column()
   pixelDensity: PixelDensityType;
+
+  @Column({ default: false })
+  isBestseller: boolean;
+
+  @Column({ default: false })
+  isNewArrival: boolean;
+
+  @Column({ default: false })
+  isFeatured: boolean;
+
+  @Column({ default: false })
+  isDiscounted: boolean;
 }
