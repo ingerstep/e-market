@@ -5,6 +5,7 @@ import { ShowCase } from '@/components/ShowCase';
 import { Button } from '@/components/ui/Button';
 import { browseByCategory } from '@/data/BrowseByCategory';
 import { Card } from '@/components/Card';
+import { PhoneCatalog } from '@/components/NewArrival';
 
 export default function Home() {
   return (
@@ -84,20 +85,7 @@ export default function Home() {
 
       <section className="bg-white flex justify-center">
         <div className="container py-12 flex flex-col gap-8">
-          <nav>
-            <button>New Arrival</button>
-            <button>Bestseller</button>
-            <button>Featured Products</button>
-          </nav>
-          <div>
-            <Card
-              imgSrc={'/#'}
-              price={'$329'}
-              link={'/catalog/phones/61'}
-              isLiked={true}
-              name={'asffas'}
-            />
-          </div>
+          <PhoneCatalog />
         </div>
       </section>
 
