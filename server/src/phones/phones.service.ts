@@ -1,4 +1,4 @@
-import { Repository } from 'typeorm';
+import { EntityManager, Repository } from 'typeorm';
 
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -11,7 +11,8 @@ export class PhonesService {
   constructor(
     @InjectRepository(Phone)
     private phonesRepository: Repository<Phone>,
-  ) {}
+    private entityManager: EntityManager,
+  ) { }
 
   getAllPhones(): Promise<Phone[]> {
     return this.phonesRepository.find();
@@ -27,6 +28,9 @@ export class PhonesService {
 
   async clearPhones(): Promise<void> {
     await this.phonesRepository.clear();
+    await this.entityManager.query(
+      'ALTER SEQUENCE phone_id_seq RESTART WITH 1',
+    );
   }
 
   async seedPhones() {
