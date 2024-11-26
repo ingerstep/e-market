@@ -1,4 +1,4 @@
-# E-market (in development)
+# E-market
 
 E-market is an online platform for selling household appliances, designed with inspiration from Apple’s aesthetics.
 
