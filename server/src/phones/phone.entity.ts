@@ -1,91 +1,44 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import {
-  AdditionallyType,
-  BrandType,
-  CapacityType,
-  ColorsType,
-  CoreType,
-  CPUType,
-  FrontCameraType,
-  MainCameraType,
-  MemoryType,
-  NameType,
-  PixelDensityType,
-  PriceType,
-  ScreenDiagonalType,
-  ScreenRefreshType,
-  ScreenResolutionType,
-  ScreenType,
-} from './phones.types';
+import { Product } from 'src/dto/product.dto';
+import { Column, Entity } from 'typeorm';
 
 @Entity()
-export class Phone {
-  @PrimaryGeneratedColumn()
-  id: number;
+export class Phone extends Product {
+  @Column()
+  screenDiagonal: string;
 
   @Column()
-  name: NameType;
+  screenResolution: string;
 
   @Column()
-  brand: BrandType;
+  screenRefreshRate: string;
 
   @Column()
-  price: PriceType;
+  screenType: string;
 
   @Column()
-  screenDiagonal: ScreenDiagonalType;
+  cpu: string;
 
   @Column()
-  screenResolution: ScreenResolutionType;
-
-  @Column()
-  screenRefreshRate: ScreenRefreshType;
-
-  @Column()
-  screenType: ScreenType;
-
-  @Column()
-  cpu: CPUType;
-
-  @Column()
-  cores: CoreType;
+  cores: number;
 
   @Column('simple-array')
-  imgPath: string[];
+  colors: string[];
 
   @Column('simple-array')
-  colors: ColorsType;
+  memory: string[];
+
+  @Column()
+  mainCamera: string;
+
+  @Column()
+  frontCamera: string;
+
+  @Column()
+  capacity: string;
 
   @Column('simple-array')
-  memory: MemoryType;
+  additionally: string[];
 
   @Column()
-  mainCamera: MainCameraType;
-
-  @Column()
-  frontCamera: FrontCameraType;
-
-  @Column()
-  details: string;
-
-  @Column()
-  capacity: CapacityType;
-
-  @Column('simple-array')
-  additionally: AdditionallyType;
-
-  @Column()
-  pixelDensity: PixelDensityType;
-
-  @Column({ default: false })
-  isBestseller: boolean;
-
-  @Column({ default: false })
-  isNewArrival: boolean;
-
-  @Column({ default: false })
-  isFeatured: boolean;
-
-  @Column({ default: false })
-  isDiscounted: boolean;
+  pixelDensity: string;
 }

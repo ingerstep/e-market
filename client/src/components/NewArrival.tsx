@@ -28,7 +28,7 @@ export const PhoneCatalog = () => {
               variant="menu"
               className={clsx(
                 category === buttonCategory &&
-                  'opacity-100 border-b-2 border-black',
+                  'border-b-2 border-black !opacity-100',
               )}
             >
               {label}

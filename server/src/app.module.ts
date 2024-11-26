@@ -30,6 +30,7 @@ import { AuthMiddleware } from './user/middleware/auth.middleware';
     UserModule,
   ],
   providers: [],
+  controllers: [],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {

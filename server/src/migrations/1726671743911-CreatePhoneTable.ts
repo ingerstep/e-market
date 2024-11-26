@@ -26,7 +26,8 @@ export class CreatePhoneTable1726671743911 implements MigrationInterface {
         "isBestseller" BOOLEAN DEFAULT FALSE,  
         "isNewArrival" BOOLEAN DEFAULT FALSE,  
         "isFeatured" BOOLEAN DEFAULT FALSE,    
-        "isDiscounted" BOOLEAN DEFAULT FALSE  
+        "isDiscounted" BOOLEAN DEFAULT FALSE,
+        "isLiked" BOOLEAN DEFAULT FALSE   
       );
     `);
   }

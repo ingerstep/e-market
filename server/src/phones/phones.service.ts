@@ -3,8 +3,8 @@ import { EntityManager, Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Phone } from './phone.entity';
 import { parsedPhoneData } from 'src/data/phones';
+import { Phone } from './phone.entity';
 
 @Injectable()
 export class PhonesService {
@@ -31,6 +31,19 @@ export class PhonesService {
       .createQueryBuilder('phone')
       .where(`phone."${category}" = :value`, { value: true })
       .getMany();
+  }
+
+  async togglePhoneLike(phoneId: number, isLiked: boolean): Promise<Phone> {
+    const phone = await this.phonesRepository.findOne({
+      where: { id: phoneId },
+    });
+
+    if (!phone) {
+      throw new Error('Phone not found');
+    }
+
+    phone.isLiked = isLiked;
+    return await this.phonesRepository.save(phone);
   }
 
   async clearPhones(): Promise<void> {

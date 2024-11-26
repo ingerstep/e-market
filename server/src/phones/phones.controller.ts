@@ -1,6 +1,7 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { PhonesService } from './phones.service';
 import { Phone } from './phone.entity';
+
+import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 
 @Controller('catalog/phones')
 export class PhonesController {
@@ -24,5 +25,16 @@ export class PhonesController {
   @Get('category/:category')
   getPhonesByCategory(@Param('category') category: string): Promise<Phone[]> {
     return this.phonesService.getPhonesByCategory(category);
+  }
+
+  @Patch(':id/like')
+  async toggleLike(
+    @Param('id') id: string,
+    @Body() body: { isLiked: boolean },
+  ): Promise<Phone> {
+    const productId = parseInt(id, 10);
+    const { isLiked } = body;
+
+    return await this.phonesService.togglePhoneLike(productId, isLiked);
   }
 }

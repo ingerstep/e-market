@@ -1,7 +1,7 @@
-import { Phone } from 'src/phones/phone.entity';
+import { IPhone } from 'src/phones/phones.types';
 import { arrayToString } from 'src/utils';
 
-const phonesData: Omit<Phone, 'id'>[] = [
+const phonesData: Omit<IPhone, 'id'>[] = [
   {
     name: 'iPhone 14 Pro',
     brand: 'Apple',
@@ -29,6 +29,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy S23 Ultra',
@@ -57,6 +58,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Mi 11 Ultra',
@@ -85,6 +87,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'iPhone 13 Mini',
@@ -113,6 +116,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy Z Fold 4',
@@ -141,6 +145,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Redmi Note 11 Pro',
@@ -170,6 +175,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone SE',
@@ -198,6 +204,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy A52',
@@ -227,6 +234,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Poco X4 Pro',
@@ -256,6 +264,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy Note 20 Ultra',
@@ -284,6 +293,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone 13 Pro Max',
@@ -312,6 +322,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Mi 11 Lite',
@@ -340,6 +351,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy Z Flip 4',
@@ -369,6 +381,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Redmi Note 10 Pro',
@@ -397,6 +410,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone 12 Pro',
@@ -425,6 +439,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy A72',
@@ -453,6 +468,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Poco F3',
@@ -481,6 +497,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone 11 Pro Max',
@@ -509,6 +526,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy S21 Ultra',
@@ -537,6 +555,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Redmi Note 10 Pro',
@@ -566,6 +585,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone 12 Mini',
@@ -594,6 +614,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy Z Fold 3',
@@ -623,6 +644,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Mi 11X',
@@ -651,6 +673,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'iPhone 13 Pro Max',
@@ -680,6 +703,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy Note 20 Ultra',
@@ -708,6 +732,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Mi 10T Pro',
@@ -737,6 +762,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone 11',
@@ -765,6 +791,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: true,
+    isLiked: false,
   },
   {
     name: 'Samsung Galaxy A52',
@@ -793,6 +820,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: true,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'Xiaomi Redmi 10 Pro',
@@ -822,6 +850,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: true,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
   {
     name: 'iPhone SE',
@@ -850,6 +879,7 @@ const phonesData: Omit<Phone, 'id'>[] = [
     isNewArrival: false,
     isFeatured: false,
     isDiscounted: false,
+    isLiked: false,
   },
 ];
 
