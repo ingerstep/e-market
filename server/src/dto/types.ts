@@ -1,5 +1,12 @@
 export interface IProduct {
   id: number;
+  type:
+    | 'phones'
+    | 'smart-watches'
+    | 'cameras'
+    | 'headphones'
+    | 'computers'
+    | 'gaming';
   name: string;
   brand: string;
   price: number;

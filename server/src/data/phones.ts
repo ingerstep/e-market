@@ -30,6 +30,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy S23 Ultra',
@@ -59,6 +60,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Mi 11 Ultra',
@@ -88,6 +90,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 13 Mini',
@@ -117,6 +120,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy Z Fold 4',
@@ -146,6 +150,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Redmi Note 11 Pro',
@@ -176,6 +181,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone SE',
@@ -205,6 +211,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy A52',
@@ -235,6 +242,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Poco X4 Pro',
@@ -265,6 +273,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy Note 20 Ultra',
@@ -294,6 +303,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 13 Pro Max',
@@ -323,6 +333,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Mi 11 Lite',
@@ -352,6 +363,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy Z Flip 4',
@@ -382,6 +394,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Redmi Note 10 Pro',
@@ -411,6 +424,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 12 Pro',
@@ -440,6 +454,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy A72',
@@ -469,6 +484,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Poco F3',
@@ -498,6 +514,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 11 Pro Max',
@@ -527,6 +544,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy S21 Ultra',
@@ -556,6 +574,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Redmi Note 10 Pro',
@@ -586,6 +605,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 12 Mini',
@@ -615,6 +635,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy Z Fold 3',
@@ -645,6 +666,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Mi 11X',
@@ -674,6 +696,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 13 Pro Max',
@@ -704,6 +727,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy Note 20 Ultra',
@@ -733,6 +757,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Mi 10T Pro',
@@ -763,6 +788,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone 11',
@@ -792,6 +818,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: true,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Samsung Galaxy A52',
@@ -821,6 +848,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: true,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'Xiaomi Redmi 10 Pro',
@@ -851,6 +879,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
   {
     name: 'iPhone SE',
@@ -880,6 +909,7 @@ const phonesData: Omit<IPhone, 'id'>[] = [
     isFeatured: false,
     isDiscounted: false,
     isLiked: false,
+    type: 'phones',
   },
 ];
 

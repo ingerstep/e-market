@@ -8,6 +8,9 @@ export class Product {
   name: string;
 
   @Column()
+  type: string;
+
+  @Column()
   brand: string;
 
   @Column()

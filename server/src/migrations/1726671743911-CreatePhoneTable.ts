@@ -5,6 +5,7 @@ export class CreatePhoneTable1726671743911 implements MigrationInterface {
     await queryRunner.query(`
       CREATE TABLE "phone" (
         "id" SERIAL PRIMARY KEY,
+        "type" VARCHAR(255),
         "name" VARCHAR(255),
         "brand" VARCHAR(255),
         "price" INTEGER,
