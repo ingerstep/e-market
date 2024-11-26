@@ -29,7 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       dropdown: '',
       close: '',
       submit: '',
-      menu: '',
+      menu: 'text-lg opacity-40 pb-1',
       primary: 'text-base rounded-lg px-14 py-4 border',
       secondary: '',
     };

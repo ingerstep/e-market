@@ -19,7 +19,13 @@ export const Card: FC<CardProps> = ({ imgSrc, isLiked, price, link, name }) => {
       <Button className="self-end">
         <LikeSvg isLiked={isLiked} stroke="#666" />
       </Button>
-      <Image width={160} height={160} src={imgSrc} alt={name} />
+      <Image
+        width={160}
+        height={160}
+        src={imgSrc}
+        alt={name}
+        className="mb-auto"
+      />
       <span className="font-medium">{name}</span>
       <span className="text-2xl font-semibold">{price}</span>
       <Link
