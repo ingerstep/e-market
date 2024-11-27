@@ -1,11 +1,12 @@
 import { newArrivalSlice } from './newArrivalSlice';
-
+import phonesDiscountReducer from './phonesDiscountSlice';
 import { configureStore } from '@reduxjs/toolkit';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       [newArrivalSlice.reducerPath]: newArrivalSlice.reducer,
+      phonesDiscount: phonesDiscountReducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(newArrivalSlice.middleware),

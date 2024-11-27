@@ -5,6 +5,7 @@ import { ShowCase } from '@/components/ShowCase';
 import { Button } from '@/components/ui/Button';
 import { browseByCategory } from '@/data/BrowseByCategory';
 import { PhoneCatalog } from '@/components/NewArrival';
+import { Discounts } from '@/components/Discounts';
 
 export default function Home() {
   return (
@@ -115,6 +116,8 @@ export default function Home() {
           linkSrc="/catalog/computers"
         />
       </section>
+
+      <Discounts />
 
       <section className="bg-gradient-to-r from-alternate via-tertiary to-alternate flex justify-center text-white py-48 relative">
         <Image

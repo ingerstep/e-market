@@ -27,6 +27,11 @@ export class PhonesController {
     return this.phonesService.getPhonesByCategory(category);
   }
 
+  @Get('category/:discounted')
+  getPhonesBySale(): Promise<Phone[]> {
+    return this.phonesService.getPhonesBySale();
+  }
+
   @Patch(':id/like')
   async toggleLike(
     @Param('id') id: string,

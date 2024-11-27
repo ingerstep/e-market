@@ -33,6 +33,13 @@ export class PhonesService {
       .getMany();
   }
 
+  async getPhonesBySale(): Promise<Phone[]> {
+    return await this.phonesRepository
+      .createQueryBuilder('phone')
+      .where(`phone."isDiscounted" = :value`, { value: true })
+      .getMany();
+  }
+
   async togglePhoneLike(phoneId: number, isLiked: boolean): Promise<Phone> {
     const phone = await this.phonesRepository.findOne({
       where: { id: phoneId },
