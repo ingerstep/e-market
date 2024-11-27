@@ -31,6 +31,7 @@ const config: Config = {
         tertiary: '#666666',
         alternate: '#2E2E2E',
         purpleMain: '#211C24',
+        catalog: '#A4A4A4',
       },
       backgroundImage: {
         'search-pattern': "url('/img/search.svg')",

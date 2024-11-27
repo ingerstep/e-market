@@ -1,7 +1,8 @@
+import { Catalog } from '@/components/Catalog';
 import { NextPage } from 'next';
 
 const Phones: NextPage = () => {
-  return <main className="w-full bg-alternate">Phones</main>;
+  return <Catalog page={'phones'} />;
 };
 
 export default Phones;

@@ -1,18 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-export interface PhonesProps {
-  id: number;
-  price: number;
-  imgPath: string[];
-  isLiked: boolean;
-  name: string;
-}
+import { PhonesCategoryProps } from './types';
 
 export const newArrivalSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
   endpoints: (builder) => ({
-    getPhonesByCategory: builder.query<PhonesProps[], string>({
+    getPhonesByCategory: builder.query<PhonesCategoryProps[], string>({
       query: (category) => `/catalog/phones/category/${category}`,
       keepUnusedDataFor: 60,
     }),

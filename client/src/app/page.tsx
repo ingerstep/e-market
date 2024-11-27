@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white flex justify-center">
+      <section id="categories" className="bg-white flex justify-center">
         <div className="container flex flex-col py-20">
           <h3 className="mb-5 text-3xl">Browse By Category</h3>
           <nav className="flex justify-between">

@@ -1,18 +1,17 @@
 import { newArrivalSlice } from './newArrivalSlice';
 import phonesDiscountReducer from './phonesDiscountSlice';
+import phonesReducer from './phonesSlice';
+
 import { configureStore } from '@reduxjs/toolkit';
 
-export const makeStore = () => {
+export const store = () => {
   return configureStore({
     reducer: {
       [newArrivalSlice.reducerPath]: newArrivalSlice.reducer,
       phonesDiscount: phonesDiscountReducer,
+      phones: phonesReducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(newArrivalSlice.middleware),
   });
 };
-
-export type AppStore = ReturnType<typeof makeStore>;
-export type RootState = ReturnType<AppStore['getState']>;
-export type AppDispatch = AppStore['dispatch'];
